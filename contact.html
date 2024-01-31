@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Contact Me</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+        <link href="/css/main.css" rel="stylesheet" />
+      </head>
+
+<body>
+    <div class="container bg-light fw-bold"style="min-height: 750px;">
+
+        <div w3-include-html="herder.html"></div>
+
+        <div class="container box-profile ">
+          <!-- <hr> -->
+           <div class="d-flex justify-content-center ">
+               <div class="col-md-7 border border-dark p-3 rounded shadow-lg">
+                   <h3>Contact Me</h3>
+                   <hr class="mb-8">
+                   <!-- <h4>My Skill</h4> -->
+
+                   <ul>
+                       <li>sahachot206@gmail.com</li>
+                       <li>Address : 56/2 หมู่7 บ้านห้วยสัก ต.ทรายทอง อ.บางสะพานน้อย จ.ประจวบคีรีขันธ์ 77170</li>
+                       <li>phone : 0649759358</li>
+                      
+                   </ul>
+                   
+                   <form action="process_comment.php" method="post">
+                    <label for="comment">ความคิดเห็น:</label><br>
+                    <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br>
+                    <input type="submit" value="ส่งความคิดเห็น">
+                  </form>
+                  
+
+               </div>
+     
+           </div>
+       </div>
+        <div class="py-2"></div>
+
+    
+    </div>
+
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+<style>
+
+</style>
+
+<script>
+    includeHTML();
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /* Loop through a collection of all HTML elements: */
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /* Make an HTTP request using the attribute value as the file name: */
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /* Remove the attribute, and call this function once more: */
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /* Exit the function: */
+          return;
+        }
+      }
+    }
+    </script>
+
+</html>

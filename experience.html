@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Experience</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+        <link href="/css/main.css" rel="stylesheet" />
+        <link rel="stylesheet" href="ex.css" />
+
+    </head>
+
+<body>
+    <div class="container bg-light fw-bold" style="min-height: 800px;"> 
+
+        <div w3-include-html="herder.html"></div>
+
+        <div class="container box-profile ">
+           <!-- <hr> -->
+            <div class="d-flex justify-content-center ">
+                <div class="col-md-7 border border-dark p-3 rounded shadow-lg">
+                    <h1>Experience</h1>
+                    <hr class="mb-8">
+                    <h4>My Skill</h4>
+
+                    <ul>
+                     
+                      <style>
+                        /* เลือกขนาดของรูปภาพ */
+                        img {
+                            width: 50px; /* ปรับขนาดตามต้องการ */
+                            height: auto; /* รักษาสัดส่วน */
+                            display: block; /* ทำให้รูปภาพเป็น block element */
+                            margin: 0 aut; /* วางตรงกลาง */
+                        }
+                
+                        /* เพิ่มเส้นขอบหรือขีดขั้นระหว่างรูปภาพกับข้อความ */
+                        li {
+                          display: flex; /* ทำให้รูปภาพและข้อความอยู่ในแนวนอน */
+                          align-items: center; /* จัดให้รูปภาพและข้อความตรงกัน */
+                          margin-bottom: 10px; /* เพิ่มระยะห่างข้างล่าง
+                        }
+                    </style>
+                        
+                      
+                        <li>
+                          <img src="\img\htmlicon.png" alt="HTML Icon">
+                          <span>HTML</span>
+                        </li>
+
+                        <li>
+                          <img src="\img\cssicon.png" alt="HTML Icon">
+                          <span>css</span>
+                        </li>
+
+                        <li>
+                          <img src="\img\newjavaicon.png" alt="HTML Icon">
+                          <span>Javascript</span>
+                        </li>
+
+                        <li>
+                          <img src="\img\arduinoicon.png" alt="HTML Icon">
+                          <span>Arduino</span>
+                        </li>
+
+                        <li>
+                          <img src="img/elec icon.png" alt="HTML Icon">
+                          <span>Basic electric</span>
+                        </li>
+
+                        <li>
+                          <img src="\img\engineericon.png" alt="HTML Icon">
+                          <span>Engineering Skill</span>
+                        </li>
+
+                                            
+                                            
+                          
+                    </ul>
+                    
+
+                </div>
+      
+            </div>
+        </div>
+        <div class="py-2"></div>
+
+        
+    </div>
+
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+
+<script>
+    includeHTML();
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /* Loop through a collection of all HTML elements: */
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /* Make an HTTP request using the attribute value as the file name: */
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /* Remove the attribute, and call this function once more: */
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /* Exit the function: */
+          return;
+        }
+      }
+    }
+    </script>
+
+</html>
