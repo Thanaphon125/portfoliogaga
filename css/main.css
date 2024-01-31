@@ -477,13 +477,7 @@ body {
     background: rgba(0,0,0,0);
   }
   
-  {
-    width: 50%;
-    height: 35px;
-    background-color: rgba(149, 151, 153, 0.842);
-    border-radius: 30%;
-    box-shadow: 0 0 4px;
-   }
+ 
    .navbar-brand{
   
     height: 50px;
@@ -671,7 +665,7 @@ body {
   
   
   
-  ..section-container {
+  .section-container {
     display: flex;
     align-items: center; /* ชิดตามแนวตั้ง (vertically align) */
   }
@@ -683,13 +677,7 @@ body {
   
   
   
-  
-  <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
+
       #profile {
         position: relative;
       }
@@ -790,44 +778,7 @@ body {
       #profile .icon:hover {
         filter: brightness(1.2);
       }
-    </style>
-  </head>
-  <body>
-    <div id="profile">
-      <div class="video-container">
-        <video autoplay loop muted>
-          <source src="your-video.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <div class="overlay"></div>
-      </div>
-      
-      <div class="content-container">
-        <div class="section-container">
-          <img src="your-image.jpg" alt="Profile Image" class="img-round">
-          <div class="section__text">
-            <h1>Your Name</h1>
-            <p>Your Description</p>
-          </div>
-        </div>
-  
-        <div class="btn-container">
-          <button class="btn btn-color-1">Button 1</button>
-          <button class="btn btn-color-2">Button 2</button>
-        </div>
-  
-        <div id="socials-container">
-          <!-- Add your social icons here -->
-          <img src="icon1.png" alt="Social Icon 1" class="icon">
-          <img src="icon2.png" alt="Social Icon 2" class="icon">
-          <!-- Add more social icons as needed -->
-        </div>
-      </div>
-    </div>
-  </body>
-  </html>
-  
-  
+   
  
   
   
